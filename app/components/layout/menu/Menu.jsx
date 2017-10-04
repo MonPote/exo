@@ -14,6 +14,7 @@ export default class Menu extends Component {
 					>
 						Home
 					</Link>
+          <Link to='/faq'>Faq</Link>
 				</li>
 			</ul>
 		);

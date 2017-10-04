@@ -8,7 +8,6 @@ export default class Home extends Component {
 		return (
 			<Layout>
 				<h1 className='Home-title'>Home</h1>
-        <Link to='/faq'>Faq</Link>
 				<h2 className='Home-subtitle'>React test</h2>
 				<ol className='Home-list'>
 					<li className='Home-list-item'>
