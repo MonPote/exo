@@ -22,9 +22,9 @@ export default class Faq extends React.Component {
 
     return (
       <div>
-        <Button bsStyle='primary'>Primary</Button>
+        <Button bsStyle='primary' onClick={() => this.setState({showAnswer: !this.state.showAnswer})}>showAnswer</Button>
         <Grid>
-          <Questions questions={questions} answers={answers} />
+          <Questions questions={questions} answers={answers} showAnswer={this.state.showAnswer}/>
         </Grid>
       </div>
     );
@@ -46,9 +46,12 @@ function Questions(props) {
             <Row>
               {question}
             </Row>
-            <Row>
-              {props.answers[index]}
-            </Row>
+            {props.showAnswer 
+              ? <Row>
+                {props.answers[index]}
+              </Row>
+              : null
+            }
           </Col>
         );
       })}
