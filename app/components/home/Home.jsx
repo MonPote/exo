@@ -1,12 +1,14 @@
 import React, { Component, PropTypes } from 'react';
 import Layout from 'components/layout/GlobalLayout.jsx';
 import './Home.less';
+import { Link } from 'react-router'
 
 export default class Home extends Component {
 	render () {
 		return (
 			<Layout>
 				<h1 className='Home-title'>Home</h1>
+        <Link to='/faq'>Faq</Link>
 				<h2 className='Home-subtitle'>React test</h2>
 				<ol className='Home-list'>
 					<li className='Home-list-item'>
